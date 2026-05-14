@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+client/node_modules/
+
+# Secrets — never commit (create .env on each machine)
+.env
+.env.local
+.env.*.local
+
+# Build output (rebuild with: cd client && npm run build)
+client/dist/
+
+# Logs & OS
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/*
+!.vscode/extensions.json

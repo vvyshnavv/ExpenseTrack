@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Expense Tracker - Login</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="nav" aria-hidden="true"></nav>
+
+    <main class="auth-container">
+      <div class="auth-wrap">
+        <div class="icon-box" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 7h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 3h-8a2 2 0 0 0-2 2v0" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 12h6" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <h1 class="display-heading">Welcome back</h1>
+        <p class="subtitle">Enter your details to view your finances.</p>
+
+        <div class="card auth-card">
+          <form id="auth-form">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" value="testing@gmail.com" />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" value="password" />
+            </div>
+
+            <button id="submit-btn" class="btn login-btn">Log in</button>
+          </form>
+        </div>
+
+        <p class="footer-text">Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+      </div>
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

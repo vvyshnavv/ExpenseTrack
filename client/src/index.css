@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,body,#root{height:100%}
+:root{
+	--bg:#f5f5f5;
+	--card:#ffffff;
+	--muted:#6b7280;
+	--accent:#244e3a;
+	--danger:#ff6b6b;
+}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg);color:#0b1220}
+
+/* Base styles */
+.card{background:var(--card)}
+.display-heading{color:#111827}
+.text-secondary{color:var(--muted)}
+.btn-cta{box-shadow:0 6px 18px rgba(2,6,23,0.06);}
+.expense-row{background:var(--card)}
+.sidebar{background:var(--card);color:#0b1220}
+.nav{background:#ffffff;border-bottom:1px solid rgba(16,24,40,0.06);height:64px}
+
+/* Card base (auth and legacy) */
+.card{@apply bg-white rounded-xl border border-gray-100 p-4 shadow-sm}
+
+/* Auth specific tweaks */
+.auth-card{padding:28px;border-radius:20px}
+.auth-card input{background:#eef6ff;color:#071013;border-radius:12px}
+.auth-card input{background:#eef6ff;color:#071013;border-radius:12px;padding:14px 18px;height:48px;border:1px solid #e6e9ef;box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);width:100%;box-sizing:border-box}
+.display-heading{color:#071013}
+.display-heading{color:#0b1220}
+.auth-container{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
+.auth-wrap{width:560px;max-width:92%;text-align:center}
+.icon-box{width:64px;height:64px;background:var(--accent);border-radius:14px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center}
+.subtitle{color:var(--muted);margin:0 0 20px}
+.form-group{text-align:left;margin-bottom:16px}
+.form-group label{display:block;margin-bottom:8px;color:#1f2937;font-weight:600}
+.login-btn{display:block;width:100%;background:var(--accent);color:#fff;border:none;padding:14px;border-radius:10px;font-weight:700;height:50px}
+.footer-text{margin-top:20px;color:var(--muted)}
+.signup-link{color:#111827;font-weight:600;text-decoration:none}
+
+/* Login button for auth page */
+.btn-login{background:#244e3a;color:#fff;padding:12px;border-radius:12px;font-weight:700}
+.btn-login:hover{filter:brightness(.98)}
+.btn-login:focus-visible{outline:3px solid rgba(36,78,58,0.12);outline-offset:2px}
+
+.sidebar a{color:rgba(203,213,225,0.7);display:block;padding:10px;border-radius:8px}
+.sidebar a.active{background:rgba(255,255,255,0.04);color:#fff}
+
+/* Headings */
+.display-heading{font-weight:900;color:theme('colors.black');letter-spacing:-0.02em}
+.section-title{font-weight:700;color:theme('colors.gray.700')}
+
+/* Primary action */
+.btn-primary{@apply px-4 py-2 rounded-lg font-semibold text-black}
+.btn-accent{background:theme('colors.accent')}
+
+.btn-cta{
+	background: #FFCC00; /* slightly darker yellow for better contrast */
+	border-radius: 12px;
+	padding: 0.6rem 1rem;
+	font-weight: 900;
+	color: #071013;
+	border: 1px solid rgba(0,0,0,0.12);
+	box-shadow: 0 6px 18px rgba(2,6,23,0.12);
+	transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+}
+.btn-cta:hover{transform:translateY(-2px);background:#E6B800;box-shadow:0 10px 28px rgba(2,6,23,0.16)}
+.btn-cta:active{transform:translateY(0);filter:brightness(.98)}
+.btn-cta:focus-visible{outline:3px solid rgba(255,204,0,0.18);outline-offset:2px}
+
+
