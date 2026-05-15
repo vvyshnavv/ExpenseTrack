@@ -1,0 +1,19 @@
+# Render Blueprint (optional): New → Blueprint → Connect this repo, or create a Web Service manually (see README).
+# After first deploy, set MONGO_URI in the Render dashboard (Environment).
+
+services:
+  - type: web
+    name: expense-tracker
+    runtime: node
+    plan: free
+    # Do not rely on root "npm run build" alone — installs client deps and runs Vite build.
+    buildCommand: npm install && cd client && npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MONGO_URI
+        sync: false
