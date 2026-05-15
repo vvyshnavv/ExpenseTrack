@@ -40,11 +40,11 @@ export default function Auth(){
           <form onSubmit={submit}>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input id="email" className="w-full" placeholder="Email" value={email || 'testing@gmail.com'} onChange={e=>setEmail(e.target.value)} />
+              <input id="email" className="w-full" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} />
             </div>
             <div className="form-group">
               <label htmlFor="password">Password</label>
-              <input id="password" type="password" className="w-full" placeholder="Password" value={password || 'password'} onChange={e=>setPassword(e.target.value)} />
+              <input id="password" type="password" className="w-full" placeholder="Password" value={password} onChange={e=>setPassword(e.target.value)} />
             </div>
             <button className="login-btn" type="submit">{isLogin ? 'Log in' : 'Sign up'}</button>
           </form>
